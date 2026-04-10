@@ -1,0 +1,350 @@
+:root {
+    /* Primary: A deep, vibrant indigo-blue that bridges the background and UI */
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    /* Accent: A bright cyan/electric blue for highlights */
+    --accent-color: #06b6d4;
+    /* Backgrounds: Using semi-transparent dark slates to let the background peak through */
+    --bg-overlay: rgba(11, 17, 32, 0.85);
+    --card-bg: #22313f;
+    /* Deep Slate with transparency */
+    /* Text: High contrast for readability */
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    /* Borders & Shadows */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url("https://i.pinimg.com/736x/6c/28/21/6c282131870f2f0767b180c54d17f22f.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-main);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(15, 23, 42);
+}
+
+nav .logo {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+nav .logo span {
+    color: var(--accent-color);
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+header {
+    background: var(--card-bg);
+    padding: 60px 20px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    margin: 40px 20px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 800;
+    color: #fff;
+}
+
+header h1 span {
+    color: var(--accent-color);
+}
+
+header p {
+    color: var(--text-muted);
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+.info-section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.info-section p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+.features-grid {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-card h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+    font-size: 20px;
+}
+
+h2 {
+    margin: 20px;
+}
+
+p,
+li {
+    color: var(--text-muted);
+    margin-left: 10px;
+}
+
+.contact,
+.add,
+.course {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 900px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+}
+
+.contactTitle,
+.addTitle,
+.coursesTitle {
+    font-size: 24px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: fit-content;
+    padding: 12px 30px;
+    border-radius: 12px;
+    margin: 0 auto 30px auto;
+}
+
+.styled-table {
+    width: 100%;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.styled-table th {
+    color: var(--accent-color);
+    padding: 18px 15px;
+    border-bottom: 2px solid var(--border-color);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+
+.styled-table td {
+    padding: 16px 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-weight: 400;
+}
+
+.styled-table td:first-child {
+    color: #fff;
+    font-weight: 600;
+}
+
+.add-container {
+    width: 100%;
+    max-width: 500px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-3px);
+}
+
+select {
+    appearance: none;
+    background-color: rgba(30, 41, 59, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+select option {
+    background-color: #111827;
+    color: white;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 500px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+}
+
+#course-footer {
+    width: 100%;
+    margin-top: auto;
+    background: var(--card-bg);
+    padding: 20px 0;
+    border-top: 4px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#course-footer p {
+    margin: 5px 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+#course-footer span {
+    color: #60a5fa;
+    font-weight: bold;
+}
+
+#course-footer .tagline {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 10px;
+    }
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    .table-container,
+    .add-container,
+    .contact-container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .table-container {
+        overflow-x: auto;
+    }
+    .styled-table {
+        font-size: 13px;
+        min-width: 500px;
+    }
+    .features-grid {
+        flex-direction: column;
+    }
+}
