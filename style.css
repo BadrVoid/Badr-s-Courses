@@ -1,25 +1,14 @@
 :root {
-    /* Primary: A deep, vibrant indigo-blue that bridges the background and UI */
     --primary-color: #3b82f6;
     --primary-hover: #2563eb;
-    /* Accent: A bright cyan/electric blue for highlights */
     --accent-color: #06b6d4;
-    /* Backgrounds: Using semi-transparent dark slates to let the background peak through */
     --bg-overlay: rgba(11, 17, 32, 0.85);
     --card-bg: #22313f;
-    /* Deep Slate with transparency */
-    /* Text: High contrast for readability */
     --text-main: #f8fafc;
     --text-muted: #cbd5e1;
-    /* Borders & Shadows */
     --border-color: rgba(255, 255, 255, 0.1);
     --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
-
-* {
-    box-sizing: border-box;
-}
-
 html {
     height: 100%;
 }
@@ -34,7 +23,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
