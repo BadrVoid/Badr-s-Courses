@@ -321,16 +321,19 @@ select option {
     .table-container,
     .add-container,
     .contact-container {
-        width: 95%;
+        width: 100%;
+        max-width: 100%;
         padding: 20px;
         margin: 20px auto;
+        box-sizing: border-box;
     }
     .table-container {
         overflow-x: auto;
     }
     .styled-table {
         font-size: 13px;
-        min-width: 500px;
+        width: 100%;
+        min-width: unset;
     }
     .features-grid {
         flex-direction: column;
