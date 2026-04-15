@@ -9,7 +9,6 @@
     --border-color: rgba(255, 255, 255, 0.1);
     --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
-
 html {
     height: 100%;
 }
@@ -24,7 +23,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -108,10 +106,8 @@ header p {
     font-size: 17px;
 }
 
-/* Updated to Grid for better automatic responsiveness */
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
     gap: 25px;
     margin-bottom: 50px;
 }
@@ -309,70 +305,34 @@ select option {
     font-style: italic;
 }
 
-/* --- REVISED RESPONSIVE SECTION --- */
-
-@media (max-width: 1024px) {
-    .table-container {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        padding: 15px 20px;
-    }
-    
-    header {
-        margin: 20px 10px;
-        padding: 40px 15px;
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-}
-
 @media (max-width: 600px) {
     nav {
         flex-direction: column;
         padding: 15px 10px;
-        gap: 15px;
+        gap: 10px;
     }
-
     .nav-links {
         justify-content: center;
         gap: 15px;
-        flex-wrap: wrap;
     }
-
-    .nav-links a {
-        font-size: 14px;
+    header h1 {
+        font-size: 28px;
     }
-
     .table-container,
     .add-container,
     .contact-container {
-        width: 92%;
+        width: 95%;
         padding: 20px;
         margin: 20px auto;
     }
-
-    /* Allows table to be swiped horizontally if too wide */
     .table-container {
         overflow-x: auto;
-        display: block;
     }
-
     .styled-table {
-        font-size: 14px;
-        min-width: 500px; /* Prevents text squishing */
+        font-size: 13px;
+        min-width: 500px;
     }
-
-    .info-section h2 {
-        font-size: 26px;
-    }
-    
-    .info-section p {
-        font-size: 15px;
+    .features-grid {
+        flex-direction: column;
     }
 }
