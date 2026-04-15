@@ -29,25 +29,26 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background: rgba(15, 23, 42);
+    padding: 1rem 5%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
 }
 
 nav .logo {
     color: #fff;
     font-weight: bolder;
-    font-size: 22px;
+    font-size: 1.4rem;
 }
 
 nav .logo span {
     color: var(--accent-color);
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
 }
@@ -56,7 +57,7 @@ nav .logo span {
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
 }
 
@@ -66,17 +67,19 @@ nav .logo span {
 
 header {
     background: var(--card-bg);
-    padding: 60px 20px;
+    padding: 4rem 2rem;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
-    margin: 40px 20px;
+    margin: 2rem auto;
     text-align: center;
     border: 1px solid var(--border-color);
+    max-width: 1200px;
+    width: 90%;
 }
 
 header h1 {
     margin: 0;
-    font-size: 35px;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     font-weight: 800;
     color: #fff;
 }
@@ -87,38 +90,43 @@ header h1 span {
 
 header p {
     color: var(--text-muted);
-    margin-top: 15px;
-    font-size: 15px;
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
 .container {
-    padding: 0 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .info-section h2 {
-    font-size: 32px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
     color: #fff;
 }
 
 .info-section p {
     text-align: center;
     line-height: 1.6;
-    font-size: 17px;
+    font-size: 1.05rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 50px;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .feature-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 30px;
+    padding: 2rem;
     border-radius: 16px;
     transition: all 0.3s ease;
 }
@@ -130,17 +138,7 @@ header p {
 .feature-card h3 {
     color: var(--accent-color);
     margin-top: 0;
-    font-size: 20px;
-}
-
-h2 {
-    margin: 20px;
-}
-
-p,
-li {
-    color: var(--text-muted);
-    margin-left: 10px;
+    font-size: 1.25rem;
 }
 
 .contact,
@@ -149,85 +147,80 @@ li {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0;
-    margin-top: 50px;
+    padding: 0 1rem;
+    margin-top: 3rem;
 }
 
-.table-container {
+.table-container,
+.add-container,
+.contact-container {
     width: 100%;
     max-width: 900px;
     background: var(--card-bg);
     border-radius: 20px;
     border: 1px solid var(--border-color);
-    padding: 30px;
+    padding: 2rem;
     box-shadow: var(--shadow-md);
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+.add-container,
+.contact-container {
+    max-width: 500px;
 }
 
 .contactTitle,
 .addTitle,
 .coursesTitle {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     background: rgba(255, 255, 255, 0.1);
     color: white;
     width: fit-content;
-    padding: 12px 30px;
+    padding: 0.75rem 2rem;
     border-radius: 12px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 2rem auto;
+    text-align: center;
 }
 
 .styled-table {
     width: 100%;
-    font-size: 16px;
-    margin: 20px 0;
+    font-size: 1rem;
+    border-collapse: collapse;
 }
 
 .styled-table th {
     color: var(--accent-color);
-    padding: 18px 15px;
+    padding: 1.2rem 1rem;
     border-bottom: 2px solid var(--border-color);
-    font-size: 12px;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     text-align: left;
 }
 
 .styled-table td {
-    padding: 16px 15px;
+    padding: 1rem;
     border-bottom: 1px solid var(--border-color);
     color: var(--text-main);
-    font-weight: 400;
-}
-
-.styled-table td:first-child {
-    color: #fff;
-    font-weight: 600;
-}
-
-.add-container {
-    width: 100%;
-    max-width: 500px;
-    background: var(--card-bg);
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    padding: 40px;
-    box-shadow: var(--shadow-md);
 }
 
 label {
     display: block;
-    margin-bottom: 10px;
-    font-size: 11px;
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
     font-weight: 700;
     color: var(--accent-color);
+    text-transform: uppercase;
 }
 
 input,
 select,
 textarea {
     width: 100%;
-    padding: 14px;
-    margin-bottom: 25px;
+    padding: 0.9rem;
+    margin-bottom: 1.5rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border-color);
     border-radius: 10px;
@@ -235,6 +228,7 @@ textarea {
     box-sizing: border-box;
     outline: none;
     transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
 textarea {
@@ -244,12 +238,12 @@ textarea {
 
 button {
     width: 100%;
-    padding: 16px;
+    padding: 1rem;
     background: var(--primary-color);
     color: white;
     border-radius: 10px;
     font-weight: 800;
-    font-size: 14px;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
@@ -260,116 +254,85 @@ button:hover {
     transform: translateY(-3px);
 }
 
-select {
-    appearance: none;
-    background-color: rgba(30, 41, 59, 0.5);
-    color: white;
-    cursor: pointer;
-}
-
-select option {
-    background-color: #111827;
-    color: white;
-}
-
-.contact-container {
-    width: 100%;
-    max-width: 500px;
-    background: var(--card-bg);
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    padding: 40px;
-    box-shadow: var(--shadow-md);
-    box-sizing: border-box;
-}
-
 #course-footer {
     width: 100%;
-    margin-top: auto;
+    margin-top: 3rem;
     background: var(--card-bg);
-    padding: 20px 0;
+    padding: 1.5rem 0;
     border-top: 4px solid var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#course-footer p {
-    margin: 5px 0;
-    font-size: 15px;
     text-align: center;
 }
 
-#course-footer span {
-    color: #60a5fa;
-    font-weight: bold;
-}
-
-#course-footer .tagline {
-    color: #94a3b8;
-    font-style: italic;
+#course-footer p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    padding: 0 1rem;
 }
 
 @media (max-width: 850px) {
     nav {
         flex-direction: column;
-        padding: 20px;
-        gap: 20px;
+        padding: 1.2rem;
+        gap: 1rem;
     }
 
     .nav-links {
         width: 100%;
         justify-content: center;
-        gap: 15px;
+        gap: 1rem;
         flex-wrap: wrap;
-    }
-
-    .nav-links a {
-        font-size: 14px;
     }
 }
 
 @media (max-width: 600px) {
     header {
-        margin: 20px 15px;
-        padding: 40px 10px;
-    }
-
-    header h1 {
-        font-size: 26px;
+        padding: 2.5rem 1rem;
+        margin: 1.5rem 1rem;
     }
 
     .table-container,
     .add-container,
     .contact-container {
-        width: calc(100% - 30px);
-        padding: 25px 20px;
-        margin: 20px auto;
-    }
-
-    .table-container {
-        overflow-x: auto;
-        display: block;
+        padding: 1.5rem 1rem;
     }
 
     .styled-table {
-        min-width: 500px;
-        font-size: 14px;
+        display: block;
+        width: 100%;
     }
 
-    .info-section h2 {
-        font-size: 26px;
-    }
-    
-    .info-section p {
-        font-size: 15px;
+    .styled-table thead {
+        display: none;
     }
 
-    #course-footer {
-        padding: 20px 10px;
+    .styled-table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 0.5rem;
     }
 
-    #course-footer p {
-        font-size: 13px;
+    .styled-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 0.75rem 0.5rem;
+    }
+
+    .styled-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--accent-color);
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        text-align: left;
+    }
+
+    .styled-table td:last-child {
+        border-bottom: none;
     }
 }
+
